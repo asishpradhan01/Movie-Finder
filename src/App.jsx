@@ -4,6 +4,8 @@ function App() {
 const [info, setInfo] = useState([]);
 const [input, setInput] = useState("");
 
+const API_KEY="1785c7b7f64c453dab42211daee9792c"
+
 function SearchInp(e) {
     setInput(e.target.value);
 }
@@ -18,7 +20,7 @@ const handleSearch = async () => {
 };
 
 try {
-  const res = await fetch(`http://localhost:5000/api/movies?q=${input}`);
+  const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${input}&page=1&include_adult=false`, options);
 const data = await res.json()
 setInfo(data.results);
 } catch (error) {
