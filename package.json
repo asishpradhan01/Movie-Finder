@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://asishpradhan01.github.io/movie-finder/",
+  "homepage": "https://asishpradhan01.github.io/Movie-Finder/",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"vite\"",
     "server": "node server.js",
